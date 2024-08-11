@@ -1,6 +1,9 @@
 ---
 import '@/styles/globals.css';
 import { Button } from '@/components/ui/button';
+import { ChevronRight } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 ---
 
 <html lang="en">
@@ -13,6 +16,67 @@ import { Button } from '@/components/ui/button';
 	</head>
 	<body>
 		<h1>Astro</h1>
-		<Button>Hello World</Button>
+
+		<section>
+			<h2>Buttons</h2>
+
+			<div class="elements">
+				<Button>Hello World</Button>
+				<Button variant="destructive">Destructive</Button>
+				<Button variant="outline">Outline</Button>
+				<Button variant="ghost">Ghost</Button>
+				<Button variant="link">Link</Button>
+				<Button variant="outline" size="icon">
+					<ChevronRight className="h-4 w-4" />
+				</Button>
+				<Button>
+					<Mail className="mr-2 h-4 w-4" /> Login with Email
+				</Button>
+				<Button>
+					<Loader2 className="mr-2 h-4 w-4 animate-spin" />
+					Please wait
+				</Button>
+			</div>
+		</section>
 	</body>
 </html>
+
+<style>
+	h1 {
+		margin: 10px;
+		font-size: x-large;
+		font-weight: 600;
+	}
+
+	h2 {
+		margin-bottom: 10px;
+		font-size: larger;
+		font-weight: 600;
+	}
+
+	section {
+		border: 1px solid;
+		padding: 10px;
+		margin: 10px;
+		border-bottom-width: 2px;
+		border-right-width: 2px;
+	}
+
+	.elements {
+		background-color: antiquewhite;
+		padding: 10px;
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.animate-spin {
+		animation: spin 1s linear infinite;
+	}
+</style>
