@@ -1,0 +1,31 @@
+---
+import SectionBlock from '../SectionBlock.astro';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+---
+
+<SectionBlock blockTitle="Example 1">
+    <!-- <div class="w-[450px]">
+        <AspectRatio ratio={16 / 8}>
+            <img
+                src="/images/bmx_a.jpg"
+                alt="Image"
+                class="rounded-md object-cover"
+            />
+        </AspectRatio>
+    </div> -->
+
+    <div class="w-[450px]">
+        <AspectRatio ratio={16 / 8}>
+            <img
+                src="/images/bmx_a.jpg"
+                alt="A house in a forest"
+                style={{
+                    objectFit: 'cover',
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: 'var(--radius-2)',
+                }}
+            />
+        </AspectRatio>
+    </div>
+</SectionBlock>
