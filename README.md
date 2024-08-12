@@ -1,4 +1,13 @@
-# Astro Starter Kit: Minimal
+# Astro UI - exploratory user interfaces
+
+
+- https://ui.shadcn.com/
+- [radix-ui](https://www.radix-ui.com/themes/example-ecommerce) 
+- [ant](https://ant.design/)
+
+
+
+## Astro Starter Kit: Minimal
 
 ```sh
 npm create astro@latest -- --template minimal
