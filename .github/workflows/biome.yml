@@ -35,5 +35,4 @@ jobs:
         run: pnpm add --save-dev --save-exact @biomejs/biome
 
       - name: Biome checks
-        working-directory: apps/api
         run: pnpm biome format --write . && pnpm biome lint --write . && pnpm biome check --write .
