@@ -2,7 +2,7 @@
 import '@/styles/globals.css';
 import { AccordionOne } from './AccordionOne';
 import { AccordionTwo } from './AccordionTwo';
-import Separator from '../Separator.astro';
+import SectionBlock from '../SectionBlock.astro';
 
 const accordionData = [
     {
@@ -22,8 +22,11 @@ const accordionData = [
 ];
 ---
 
-<AccordionTwo data={accordionData} client:idle />
+<SectionBlock blockTitle="Example 1">
+    <AccordionOne client:idle />
+</SectionBlock>
 
-<Separator />
 
-<AccordionOne client:idle />
+<SectionBlock blockTitle="Example 2">
+    <AccordionTwo data={accordionData} client:idle />
+</SectionBlock>
