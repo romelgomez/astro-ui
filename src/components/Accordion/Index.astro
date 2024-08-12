@@ -1,5 +1,8 @@
 ---
-import { Accordion } from './AccordionTwo';
+import '@/styles/globals.css';
+import { AccordionOne } from './AccordionOne';
+import { AccordionTwo } from './AccordionTwo';
+import Separator from '../Separator.astro';
 
 const accordionData = [
     {
@@ -19,4 +22,8 @@ const accordionData = [
 ];
 ---
 
-<Accordion data={accordionData} client:idle />
+<AccordionTwo data={accordionData} client:idle />
+
+<Separator />
+
+<AccordionOne client:idle />

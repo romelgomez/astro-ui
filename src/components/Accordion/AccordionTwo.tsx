@@ -12,7 +12,7 @@ interface Props {
   }[];
 }
 
-export function Accordion({ data }: Props) {
+export function AccordionTwo({ data }: Props) {
   return (
     <BaseAccordion type="single" collapsible className="w-full">
       {data.map((item, i) => {
