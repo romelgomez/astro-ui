@@ -1,9 +1,9 @@
 import {
-  Accordion as BaseAccordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+  Accordion as BaseAccordion,
+} from '@/components/ui/accordion';
 
 interface Props {
   data: {
@@ -14,10 +14,10 @@ interface Props {
 
 export function AccordionTwo({ data }: Props) {
   return (
-    <BaseAccordion type="single" collapsible className="w-full">
+    <BaseAccordion type='single' collapsible className='w-full'>
       {data.map((item, i) => {
         return (
-          <AccordionItem value={`item-${i.toFixed()}`} key={i}>
+          <AccordionItem value={`item-${i.toFixed()}`} key={item.title}>
             <AccordionTrigger>{item.title}</AccordionTrigger>
             <AccordionContent>{item.description}</AccordionContent>
           </AccordionItem>
