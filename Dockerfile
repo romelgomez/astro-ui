@@ -21,12 +21,4 @@ COPY . ./
 
 RUN pnpm run build
 
-FROM caddy
-
-WORKDIR /app
-
-COPY Caddyfile ./
-
-COPY --from=build /app/dist /app/dist
-
-CMD ["caddy", "run", "--config", "Caddyfile", "--adapter", "caddyfile"]
+CMD ["node", "dist/server/entry.mjs"]
