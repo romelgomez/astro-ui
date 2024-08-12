@@ -3,6 +3,7 @@ import '@/styles/globals.css';
 import Section from '@/components/Section.astro';
 import Buttons from '@/components/Buttons.astro';
 import Accordions from '@/components/Accordion/Index.astro';
+import Alert from '@/components/Alert/Index.astro';
 ---
 
 <html lang="en">
@@ -20,8 +21,12 @@ import Accordions from '@/components/Accordion/Index.astro';
 			<Buttons />
 		</Section>
 
-		<Section title="Accordion">
+		<Section title="Accordions">
 			<Accordions />
+		</Section>
+
+		<Section title="Alerts">
+			<Alert />
 		</Section>
 	</body>
 </html>
@@ -31,37 +36,5 @@ import Accordions from '@/components/Accordion/Index.astro';
 		margin: 10px;
 		font-size: x-large;
 		font-weight: 600;
-	}
-
-	h2 {
-		margin-bottom: 10px;
-		font-size: larger;
-		font-weight: 600;
-	}
-
-	section {
-		border: 1px solid;
-		padding: 10px;
-		margin: 10px;
-		border-bottom-width: 2px;
-		border-right-width: 2px;
-	}
-
-	.elements {
-		background-color: antiquewhite;
-		padding: 10px;
-	}
-
-	@keyframes spin {
-		0% {
-			transform: rotate(0deg);
-		}
-		100% {
-			transform: rotate(360deg);
-		}
-	}
-
-	.animate-spin {
-		animation: spin 1s linear infinite;
 	}
 </style>
