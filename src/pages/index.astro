@@ -2,6 +2,8 @@
 import '@/styles/globals.css';
 import Section from '@/components/Section.astro';
 import Buttons from '@/components/Buttons.astro';
+import { AccordionDemo } from '@/components/Accordion';
+import AccordionTwoExample from '@/components/AccordionTwoExample.astro';
 ---
 
 <html lang="en">
@@ -19,7 +21,14 @@ import Buttons from '@/components/Buttons.astro';
 			<Buttons />
 		</Section>
 
-		<Section title="Accordion" />
+		<Section title="Accordion">
+
+
+			<AccordionDemo client:idle />
+
+
+			<AccordionTwoExample />
+		</Section>
 	</body>
 </html>
 
