@@ -3,19 +3,24 @@ FROM node:lts-alpine AS build
 ENV NPM_CONFIG_UPDATE_NOTIFIER=false
 ENV NPM_CONFIG_FUND=false
 
-# Add any needed enviroment variables here following this same format
+# Install pnpm globally
+RUN npm install -g pnpm
+
+# Add any needed environment variables here following this same format
 # ARG SAMPLE_ENVIRONMENT_VARIABLE_1
 # ARG SAMPLE_ENVIRONMENT_VARIABLE_2
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY pnpm-lock.yaml ./
+COPY .npmrc ./
+COPY package.json ./
 
-RUN npm ci
+RUN pnpm install --frozen-lockfile
 
 COPY . ./
 
-RUN npm run build
+RUN pnpm run build
 
 FROM caddy
 
