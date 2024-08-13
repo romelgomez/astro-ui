@@ -1,0 +1,19 @@
+---
+import SectionBlock from '../SectionBlock.astro';
+
+import BreadcrumbOne from './BreadcrumbOne.astro';
+import { BreadcrumbThree } from './BreadcrumbThree';
+import { BreadcrumbTwo } from './BreadcrumbTwo';
+---
+ß
+<SectionBlock blockTitle="Example 1">
+  <BreadcrumbOne />
+</SectionBlock>
+
+<SectionBlock blockTitle="Example 2">
+  <BreadcrumbTwo client:idle />
+</SectionBlock>
+
+<SectionBlock blockTitle="Example 3">
+  <BreadcrumbThree client:idle />
+</SectionBlock>
